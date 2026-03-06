@@ -1,0 +1,48 @@
+.audit-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.audit-log-table table {
+  font-size: 12px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.audit-log-table th {
+  position: sticky;
+  top: 0;
+  background: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+  padding: 6px 10px;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.audit-log-table td {
+  padding: 5px 10px;
+  border-bottom: 1px solid #f3f4f6;
+  color: #4b5563;
+  vertical-align: top;
+}
+
+.audit-log-table tr:hover td {
+  background: #f9fafb;
+}
+
+.audit-toolbar .btn-sm {
+  cursor: pointer;
+}
+
+.audit-toolbar .btn-sm:hover {
+  background: #f3f4f6 !important;
+}
+
+.audit-filter:focus {
+  outline: none;
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
