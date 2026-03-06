@@ -111,7 +111,7 @@ as.data.frame.audit_log <- function(x, ...) {
         if (length(e$details) == 0L) return("")
         paste(
           names(e$details),
-          vapply(e$details, as.character, character(1L)),
+          vapply(e$details, function(d) paste(as.character(d), collapse = ", "), character(1L)),
           sep = "=",
           collapse = "; "
         )

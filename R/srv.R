@@ -115,6 +115,15 @@ update_observer <- function(update, record) {
           record("stack_remove", details = list(stack = stk_id))
         }
       }
+
+      if (has_length(upd$stacks$mod)) {
+        for (stk_id in names(upd$stacks$mod)) {
+          record("stack_modify", details = list(
+            stack = stk_id,
+            blocks = as.character(upd$stacks$mod[[stk_id]])
+          ))
+        }
+      }
     }
   )
 }
