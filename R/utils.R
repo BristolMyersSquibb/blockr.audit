@@ -1,4 +1,3 @@
-pkg_name <- function() "blockr.audit"
 
 pkg_version <- function() {
   as.character(utils::packageVersion(pkg_name()))
