@@ -1,7 +1,4 @@
 
-pkg_version <- function() {
-  as.character(utils::packageVersion(pkg_name()))
-}
 
 has_length <- function(x) length(x) > 0L
 
