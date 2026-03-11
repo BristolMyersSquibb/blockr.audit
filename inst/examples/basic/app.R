@@ -3,6 +3,8 @@ library(blockr.core)
 library(blockr.dock)
 library(blockr.dag)
 
+options(blockr.allow_clear_audit = TRUE)
+
 serve(
   new_dock_board(
     blocks = c(
