@@ -41,7 +41,9 @@ audit_ext_srv <- function(log) {
         })
 
         observeEvent(input$clear_log, {
-          audit_log(new_audit_log())
+          if (isTRUE(getOption("blockr.allow_clear_audit", FALSE))) {
+            audit_log(new_audit_log())
+          }
         })
 
         output$export_log <- downloadHandler(

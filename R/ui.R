@@ -44,15 +44,17 @@ audit_ext_ui <- function(id, board) {
           tags$option(value = "block_error", "Block error"),
           tags$option(value = "block_success", "Block success")
         ),
-        actionButton(
-          ns("clear_log"),
-          "Clear",
-          class = "btn-sm",
-          style = paste0(
-            "font-size: 12px; padding: 4px 12px; background: white; ",
-            "border: 1px solid #d1d5db; border-radius: 4px; color: #374151;"
+        if (getOption("blockr.allow_clear_audit", FALSE)) {
+          actionButton(
+            ns("clear_log"),
+            "Clear",
+            class = "btn-sm",
+            style = paste0(
+              "font-size: 12px; padding: 4px 12px; background: white; ",
+              "border: 1px solid #d1d5db; border-radius: 4px; color: #374151;"
+            )
           )
-        ),
+        },
         downloadButton(
           ns("export_log"),
           "Export",
